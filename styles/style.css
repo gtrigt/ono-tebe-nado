@@ -170,6 +170,10 @@ content-box {
     padding: 0 0 26px 40px;
 }
 
+.card-link {
+    text-decoration: none;
+}
+
 .lots__cards {
     display: flex;
     gap: 25px;
@@ -236,11 +240,11 @@ content-box {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 133px 24px 0;
-    gap: 24px 25px;
+    gap: 16px 25px;
     grid-template-areas:
         "image title title"
-        ". text-one text-one"
-        ". text-two text-two";
+        ". text-main text-main"
+        ". text-add text-add";
 }
 
 .about__circle-img {
@@ -253,7 +257,7 @@ content-box {
     background-color: #000;
     align-self: center;
     justify-self: center;
-    margin-top: 41px;
+    margin-top: 49px;
 }
 
 .about__image {
@@ -269,19 +273,23 @@ content-box {
     text-transform: uppercase;
     color: #000;
     align-self: center;
-    margin-top: 44px;
+    margin-top: 58px;
 }
 
-.about__text-one {
-    grid-area: text-one;
+/*  я использовал grid-template-areas поэтому разделил тексты на 2 класса */
+
+.about__text-main {
+    grid-area: text-main;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     color: #000;
+    margin-bottom: 5px;
+    margin-top: -4px;
 }
 
-.about__text-two {
-    grid-area: text-two;
+.about__text-additional {
+    grid-area: text-add;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
@@ -292,7 +300,7 @@ content-box {
     font-family: "Raleway", sans-serif;
     display: flex;
     gap: 186px;
-    padding: 173px 50px 91px;
+    padding: 183px 50px 91px;
 }
 
 .footer__menu {
@@ -308,6 +316,10 @@ content-box {
 }
 
 .footer__menu-item-active {
+    text-decoration: none;
+}
+
+.footer__menu-link-active {
     text-decoration: none;
 }
 
