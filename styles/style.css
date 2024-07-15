@@ -1,4 +1,4 @@
-content-box {
+.content-box {
     font-family: "Raleway", sans-serif;
     width: 1100px;
 }
@@ -240,14 +240,12 @@ content-box {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 133px 24px 0;
-    gap: 16px 25px;
-    grid-template-areas:
-        "image title title"
-        ". text-main text-main"
-        ". text-add text-add";
+    gap: 0px 15px;
 }
 
 .about__circle-img {
+    grid-column: span 1;
+    grid-row: span 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,50 +255,39 @@ content-box {
     background-color: #000;
     align-self: center;
     justify-self: center;
-    margin-top: 49px;
+    margin-top: 40px;
 }
 
 .about__image {
     width: 148px;
     height: 100%;
-    grid-area: image;
 }
 
 .about__title {
-    grid-area: title;
+    grid-column:2/3;
+    align-self: center;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
     color: #000;
     align-self: center;
-    margin-top: 58px;
+    padding: 150px 0 101px 0;
 }
 
-/*  я использовал grid-template-areas поэтому разделил тексты на 2 класса */
-
-.about__text-main {
-    grid-area: text-main;
+.about__text {
+    grid-column: 2/3;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     color: #000;
-    margin-bottom: 5px;
-    margin-top: -4px;
-}
-
-.about__text-additional {
-    grid-area: text-add;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    color: #000;
+    margin-bottom: 27px;
 }
 
 .footer {
     font-family: "Raleway", sans-serif;
     display: flex;
     gap: 186px;
-    padding: 183px 50px 91px;
+    padding: 150px 50px 91px;
 }
 
 .footer__menu {
